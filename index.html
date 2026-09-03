@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROJETO ORATÓRIA — monitorias coletiva</title>
+  <meta name="description" content="Slides, videoaulas e resumos das monitorias dadas por alunos para ajudar colegas com dificuldade." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo Aulas Colab" />
+          <span>
+          <span class="brand-name">Projeto de ORATÓRIA — monitorias coletiva</span>
+        </span>
+      </a>
+      <a class="btn btn-primary" href="adicionar.html">+ Nova aula</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-rings" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <path d="M 30 150 A 90 90 0 0 1 170 150" />
+          <path d="M 55 150 A 65 65 0 0 1 145 150" />
+          <path d="M 80 150 A 40 40 0 0 1 120 150" />
+        </svg>
+      </div>
+      <h1>Aulas e materiais didáticos</h1>
+      <p>
+        Todo material das reuniões organizado num lugar só: slides,
+        videoaulas, resumos, data, horário e o link pra entrar na chamada.
+      </p>
+    </section>
+
+    <section class="filters" aria-label="Filtrar aulas">
+      <input type="search" id="busca" placeholder="Buscar por assunto, matéria ou monitor…" aria-label="Buscar aula" />
+      <select id="filtro-materia" aria-label="Filtrar por matéria">
+        <option value="todas">Todas as matérias</option>
+      </select>
+      <span class="filters-count" id="contagem"></span>
+    </section>
+
+    <section id="grid-aulas" class="grid" aria-live="polite">
+      <!-- preenchido via script.js -->
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      Feito por alunos monitores, pra alunos. Quer ajudar? Veja como
+      <a href="adicionar.html">adicionar sua aula</a> ou contribua direto no
+      <a href="https://github.com/" target="_blank" rel="noopener">repositório no GitHub</a>.
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

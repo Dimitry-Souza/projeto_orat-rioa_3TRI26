@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova aula — Aulas Colab</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo Aulas Colab" />
+        <span>
+          <span class="brand-name">Projeto de ORATÓRIA — monitorias coletiva</span>
+        </span>
+      </a>
+      <a class="btn btn-ghost" href="index.html">Ver aulas</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" style="padding-bottom: 10px;">
+      <h1 style="max-width: 18ch;">Vai dar uma aula? Cadastra ela aqui</h1>
+    </section>
+
+    <form id="form-aula" class="form-card">
+      <div class="field">
+        <label for="materia">Matéria</label>
+        <input type="text" id="materia" placeholder="Ex.: Cálculo I" required />
+      </div>
+
+      <div class="field">
+        <label for="titulo">Assunto da aula</label>
+        <input type="text" id="titulo" placeholder="Ex.: Limites e continuidade" required />
+      </div>
+
+      <div class="field">
+        <label for="monitor">Seu nome</label>
+        <input type="text" id="monitor" placeholder="Quem está dando a aula" required />
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="data">Data</label>
+          <input type="date" id="data" required />
+        </div>
+        <div class="field">
+          <label for="horario">Horário</label>
+          <input type="time" id="horario" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="linkReuniao">Link da chamada</label>
+        <input type="url" id="linkReuniao" placeholder="Meet, Zoom, Discord… (deixe em branco se ainda não tiver)" />
+      </div>
+
+      <div class="field">
+        <label for="slides">Link dos slides</label>
+        <input type="url" id="slides" placeholder="Deixe em branco se não tiver" />
+      </div>
+
+      <div class="field">
+        <label for="video">Link da videoaula gravada</label>
+        <input type="url" id="video" placeholder="Deixe em branco se não tiver" />
+      </div>
+
+      <div class="field">
+        <label for="resumo">Link do resumo</label>
+        <input type="url" id="resumo" placeholder="Deixe em branco se não tiver" />
+      </div>
+
+      <div class="field">
+        <label for="descricao">Descrição curta</label>
+        <textarea id="descricao" rows="3" placeholder="1 ou 2 frases sobre o que a aula cobre" required></textarea>
+        <p class="field-hint">Aparece embaixo do título do card na página inicial.</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Gerar bloco</button>
+    </form>
+
+    <div id="output-box" class="form-card output-box" hidden>
+      <label for="saida" style="display:block; font-weight:600; margin-bottom:8px;">
+        Cole isto dentro de <code style="background:var(--bg-deep); padding:2px 6px; border-radius:4px;">assets/data.js</code>, logo depois de <code style="background:var(--bg-deep); padding:2px 6px; border-radius:4px;">const AULAS = [</code>
+      </label>
+      <pre id="saida"></pre>
+      <button type="button" id="btn-copiar" class="btn btn-ghost">Copiar bloco</button>
+    </div>
+
+
+  <footer class="site">
+    <div class="wrap">
+      Dúvida de como editar no GitHub? Veja o <code>README.md</code> do repositório.
+    </div>
+  </footer>
+
+  <script src="assets/adicionar.js"></script>
+</body>
+</html>
